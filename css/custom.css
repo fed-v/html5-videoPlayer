@@ -1,0 +1,234 @@
+/*****************************************/
+/***         GENERAL STYLES            ***/
+/*****************************************/
+
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+footer{
+	background:#eee;
+	height:90px;
+	text-align:center;
+}
+
+
+
+.main-container {
+    width: 90%;
+    margin:auto;
+}
+
+
+/*****************************************/
+/***          Video Section            ***/
+/*****************************************/
+
+#video-section {
+    margin: 0 auto 0 auto;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    padding: 30px;
+    max-width:800px;
+}
+
+
+#media-player video {
+    width: 100%;
+}
+
+
+/* HIDE HTML VIDEO CONTROLS */
+::-webkit-media-controls {
+  display:none !important;
+}
+
+
+.media-controls{
+    margin-top: -9px;
+    padding-top: 2px;
+    height: 32px;
+    background: #000;
+
+}
+
+#currentTime{
+  color: #eee;
+}
+
+
+
+#progressContainer{
+        float: left;
+        background-color: #fff;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 12px;
+        height: 5px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+}
+
+#progress-bar{
+    background-color: #34DDDD;
+    height: 5px;
+    border-radius: 5px !important;
+    -webkit-box-shadow: 2px 0px 10px 2px rgba(52, 221, 221, .5);
+    -moz-box-shadow: 2px 0px 10px 2px rgba(52, 221, 221, .5);
+    box-shadow: 2px 0px 10px 2px rgba(52, 221, 221, .5);
+
+}
+
+
+.media-controls .btn{
+    width: 40px;
+    font-size:12px;
+    padding: 0 12px;
+    margin-right:2px;
+    margin-top:3px;
+    background: -webkit-linear-gradient(top, #666666, #000000);
+    background: -moz-linear-gradient(top, #666666, #000000);
+    background: -ms-linear-gradient(top, #666666, #000000);
+    background: -o-linear-gradient(top, #666666, #000000);
+    background: linear-gradient(to bottom, #666666, #000000);
+    color: #eee;  /* COLOR OF THE GLYPHICONS */
+    border: 2px solid #666;
+    float: left;
+}
+
+.btn:hover{
+    color: #fff;
+
+    /*  GLOW EFFECT */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: normal;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    white-space: pre;
+    text-shadow: 0 0 10px rgba(52, 221, 221, 1) , 0 0 20px rgba(52, 221, 221, 1) , 0 0 30px rgba(52, 221, 221, 1) , 0 0 40px #34DDDD , 0 0 70px #34DDDD , 0 0 80px #34DDDD , 0 0 100px #34DDDD;
+
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+
+ #playControls{
+
+  height:28px;
+  float: left;
+  margin-left: 7px;
+}
+
+
+
+
+
+#timeContainer{
+   float: left;
+}
+
+ #volumeControls{
+
+  float: right;
+  height:28px;
+  margin-right: 7px;
+}
+
+
+/*******************************************************/
+/*slider*/
+
+
+#slider{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #333 #333 #777 #333;
+    border-radius: 25px;
+    width: 15px;
+    height: 100px;
+    background-color: #840000;
+    /*background: url('../images/bg-track.png') repeat top left;*/
+    box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5),
+                 0 1px 0 0px rgba(250, 250, 250, .5);
+    position: absolute;
+    margin-top: -115px !important;
+    margin-left: 12px !important;
+    display:none;
+}
+
+
+.volume {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url('../images/volume.png') no-repeat 0 -50px;
+    margin-top: -5px;
+}
+
+.ui-slider-handle {
+    height: 10px !important;
+    cursor: pointer !important;
+}
+
+/*
+.ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+
+    background: url('../images/handle.png') no-repeat 50% 50%;
+    font-weight: bold;
+    color: #1C94C4;
+    outline: none;
+    top: -7px;
+    margin-left: -12px;
+}*/
+
+
+
+.ui-slider-range {
+    background: linear-gradient(top, #ffffff 0%,#eaeaea 100%);
+    position: absolute;
+    border: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 25px;
+}
+
+
+
+
+.ui-slider {
+    margin:0px !important;
+    float: left;
+}
+
+
+
+
+
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
