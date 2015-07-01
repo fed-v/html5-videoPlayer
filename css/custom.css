@@ -160,16 +160,16 @@ footer{
     border-width: 1px;
     border-style: solid;
     border-color: #333 #333 #777 #333;
-    border-radius: 25px;
-    width: 15px;
+    border-radius: 10px !important;
+    width: 10px;
     height: 100px;
     background-color: #840000;
     /*background: url('../images/bg-track.png') repeat top left;*/
     box-shadow: inset 0 1px 5px 0px rgba(0, 0, 0, .5),
                  0 1px 0 0px rgba(250, 250, 250, .5);
     position: absolute;
-    margin-top: -115px !important;
-    margin-left: 12px !important;
+    margin-top: -110px !important;
+    margin-left: 15px !important;
     display:none;
 }
 
@@ -178,13 +178,15 @@ footer{
     display: inline-block;
     width: 25px;
     height: 25px;
-    background: url('../images/volume.png') no-repeat 0 -50px;
+    /*background: url('../images/volume.png') no-repeat 0 -50px;*/
     margin-top: -5px;
 }
 
 .ui-slider-handle {
     height: 10px !important;
     cursor: pointer !important;
+    left: -0.35em !important;
+    margin-bottom: -9px !important;
 }
 
 /*
@@ -193,7 +195,6 @@ footer{
     z-index: 2;
     width: 25px;
     height: 25px;
-
     background: url('../images/handle.png') no-repeat 50% 50%;
     font-weight: bold;
     color: #1C94C4;

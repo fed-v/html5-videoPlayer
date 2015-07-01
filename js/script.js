@@ -15,12 +15,13 @@ jQuery(document).ready(function ($) {
         playBtn = document.getElementById('play_btn'),
         stopBtn = document.getElementById('stop_btn'),
         volumeInc_btn = document.getElementById('volumeInc_btn'),
-        volumeDec_btn = document.getElementById('volumeDec_btn'),
-        mute_btn = document.getElementById('mute_btn'),
         replay_btn = document.getElementById('replay_btn');
 
+    // DISABLE VIDEO DEFAULT CONTROLS
     mediaPlayer.controls = false;
 
+    // INITIALIZE VOLUME TO 50%
+    mediaPlayer.volume = 0.5;
 
 
 
@@ -98,7 +99,7 @@ jQuery(document).ready(function ($) {
     function showSlider() {
 
         // CHECK IF SLIDER IS VISIBLE OR NOT
-        if ($('#slider').css('display') == 'none') {
+        if ($('#slider').css('display') === 'none') {
 
             $('#slider').fadeIn('slow');
 
@@ -114,25 +115,12 @@ jQuery(document).ready(function ($) {
     // CHANGE VOLUME
     function changeVolume(volumeLevel) {
 
-        if (volumeLevel<0) {
+        if (volumeLevel < 0) {
             mediaPlayer.volume = 0;
         } else {
             mediaPlayer.volume = volumeLevel;
         }
 
-
-
-
-
-/*
-        if (this.id === 'volumeInc_btn') {
-            mediaPlayer.volume += mediaPlayer.volume === 1 ? 0 : 0.1;
-        } else {
-            mediaPlayer.volume -= (mediaPlayer.volume === 0 ? 0 : 0.1);
-        }
-
-        mediaPlayer.volume = parseFloat(mediaPlayer.volume).toFixed(1);
-*/
     }
 
 
@@ -148,7 +136,8 @@ jQuery(document).ready(function ($) {
             mediaPlayer.muted = true;
         }
 
-    }*/
+    }
+    */
 
 
     // REPLAY MEDIA
@@ -174,6 +163,8 @@ jQuery(document).ready(function ($) {
 
 
 
+
+
     /***************************************/
     /***          SET LISTENERS         ***/
     /***************************************/
@@ -182,55 +173,57 @@ jQuery(document).ready(function ($) {
     $(window).resize(setProgressWidth);
     setProgressWidth();
 
+    // BUTTON LISTENERS
     playBtn.onclick = togglePlay;
     stopBtn.onclick = stopMedia;
     mediaPlayer.addEventListener('timeupdate', updateProgressBar, false);
     mediaPlayer.addEventListener('timeupdate', updateTime, false);
     volumeInc_btn.onclick = showSlider;
-    //volumeDec_btn.onclick = changeVolume;
-    //mute_btn.onclick = muteVolume;
     replay_btn.onclick = replayMedia;
 
 
 
 
 
-    //$(function () {
 
+/*****************************************/
+/***        jQuery UI Slider          ***/
+/****************************************/
+
+    $(function () {
+
+        // CREATE AN INSTANCE ON THE SLIDE OBJECT
         var slider = $('#slider');
+
         slider.slider({
             range: "min",
             min: 0,
             max: 100,
             orientation: "vertical",
+            value: 50,
 
-            slide: function (event, ui) {
+            // EVENT WHEN SLIDER IS IN USE
+            slide: function () {
 
-                var value = slider.slider('value'),
-                    volume = $('.volume');
+                // GET THE VALUE OF THE SLIDER
+                var value = slider.slider('value');
 
+                // CALL PARENT FUNCTION TO CHANGE VOLUME
+                changeVolume((value / 100).toFixed(1));
 
-                console.log((value/100).toFixed(1));
-                //mediaPlayer.volume = (value/100).toFixed(1);
-
-                changeVolume((value/100).toFixed(1));
-
-                if(value <= 5) {
-                    volume.css('background-position', '0 0');
-                }
-                else if (value <= 25) {
-                    volume.css('background-position', '0 -25px');
-                }
-                else if (value <= 75) {
-                    volume.css('background-position', '0 -50px');
-                }
-                else {
-                    volume.css('background-position', '0 -75px');
+                // CHANGE BUTTON ICON ACCORDING TO VOLUME LEVEL
+                if ((value / 100).toFixed(1) <= 0.0) {
+                    $('#volumeInc_btn').removeClass('glyphicon-volume-up glyphicon-volume-down').addClass('glyphicon-volume-off');
+                } else if ((value / 100).toFixed(1) <= 0.4) {
+                    $('#volumeInc_btn').removeClass('glyphicon-volume-off glyphicon-volume-up').addClass('glyphicon-volume-down');
+                } else if ((value / 100).toFixed(1) <= 0.8) {
+                    $('#volumeInc_btn').removeClass('glyphicon-volume-off glyphicon-volume-down').addClass('glyphicon-volume-up');
                 }
 
-            },
+            }
 
         });
 
-    //});
+    });
+
 });
