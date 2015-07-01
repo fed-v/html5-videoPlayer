@@ -99,13 +99,13 @@ jQuery(document).ready(function ($) {
     function showSlider() {
 
         // CHECK IF SLIDER IS VISIBLE OR NOT
-        if ($('#slider').css('display') === 'none') {
+        if ($('#sliderContainer').css('display') === 'none') {
 
-            $('#slider').fadeIn('slow');
+            $('#sliderContainer').fadeIn('slow');
 
         } else {
 
-            $('#slider').fadeOut('slow');
+            $('#sliderContainer').fadeOut('slow');
 
         }
 
