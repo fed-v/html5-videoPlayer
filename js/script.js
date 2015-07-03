@@ -155,7 +155,7 @@ jQuery(document).ready(function ($) {
         // GET THE WIDTH OF EACH ELEMENT IN THE MEDIA CONTROL SECTION (INCLUDING THE 45PX OF SPACE INBETWEEN)
         // AND SUBSTRACT THEM FROM TOTAL WIDTH TO CALCULATE THE SPACE LEFT AVAILABLE FOR THE PROGRESS BAR
         var widthAvailable = $('.media-controls').width() - $('#playControls').width() -
-                             $('#timeContainer').width() - $('#volumeControls').width() - 45 + "px";
+                             $('#timeContainer').width() - $('#volumeControls').width() - 38 + "px";
 
         $('#progressContainer').css("width", widthAvailable);
 
