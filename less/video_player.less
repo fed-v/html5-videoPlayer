@@ -1,0 +1,227 @@
+/*!
+ * Video Player Styles v2
+ *
+ * Author: Federico Venturino
+ *
+ * Open sourced under MIT license by @mdo.
+ * Some variables and mixins for the custom html5 video Player (Apache 2 license).
+ * https://github.com/fed-v/html5-videoPlayer
+ *
+ */
+
+
+ /*****************************************/
+ /***          Video Section            ***/
+ /*****************************************/
+
+ #video-section {
+     margin: 0 auto 0 auto;
+     font-size: 18px;
+     font-weight: 200;
+     line-height: 30px;
+     padding: 30px;
+     max-width:800px;
+     border-top: 1px solid #606670;
+     padding-top: 50px;
+ }
+
+
+ #description-section{
+     padding-top: 25px;
+     font-size: 14px;
+     letter-spacing: 1px;
+ }
+
+
+ #description-section .btn-primary {
+     margin-top: 15px;
+     background-color: #eb6c65;
+     border: none;
+     .border-radius(5px);
+ }
+
+
+ #description-section .btn-primary:hover {
+     background-color: #c25c56;
+ }
+
+
+ #media-player {
+     .box-shadow(0px, 0px, 40px, 10px, 0.7);
+ }
+
+
+ #media-player video {
+     width: 100%;
+ }
+
+
+ /* HIDE HTML VIDEO CONTROLS */
+ ::-webkit-media-controls {
+   display:none !important;
+ }
+
+
+
+
+
+ /*****************************************/
+ /***          Media Controls           ***/
+ /*****************************************/
+
+ .media-controls {
+     margin-top: -9px;
+     padding-top: 0px;
+     height: 32px;
+     border:1px solid #000;
+     #gradient > .vertical(#333333, #000000);
+ }
+
+
+ #currentTime{
+     color: #eee;
+     font-size: 14px;
+     line-height: 1.6;
+     -webkit-font-smoothing: antialiased;
+ }
+
+
+ #progressContainer{
+     float: left;
+     background-color: #fff;
+     margin-left: 10px;
+     margin-right: 15px;
+     margin-top: 13px;
+     height: 5px;
+     .border-radius(10px);
+ }
+
+
+ #progress-bar{
+     background-color: #34DDDD;
+     height: 5px;
+     .border-radius(5px);
+     .box-shadow(2px, 0px, 10px, 2px, 52, 221, 221, .5);
+ }
+
+ #playControls{
+     height: 28px;
+     float: left;
+     margin-left: -1px;
+ }
+
+
+ #timeContainer{
+     float: left;
+ }
+
+
+ #volumeControls{
+     float: right;
+     height: 28px;
+     margin-right: 0px;
+ }
+
+
+
+
+ /*****************************************/
+ /***          Button Styles            ***/
+ /*****************************************/
+
+ .media-controls .btn{
+     width: 38px;
+     font-size: 12px;
+     background: transparent;
+     color: #eee;  /* COLOR OF THE GLYPHICONS */
+     float: left;
+     margin-top: -1px;
+     border-top: 1px solid #555;
+     border-right: 1px solid #555;
+     border-bottom: 1px solid #000;
+     border-left: 1px solid #000;
+     .border-radius(0px);
+ }
+
+
+ /* METALLIC GRADIENT */
+ /*.media-controls .btn span, #currentTime{
+     background: -webkit-linear-gradient(#fff, #eee, #999);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+ }*/
+
+
+ .media-controls .btn:hover{
+     color: #34DDDD;
+
+     /*  GLOW EFFECT */
+     text-shadow: 0 0 8px #34DDDD, 0 0 10px #34DDDD;
+     /*text-shadow: 0 0 10px rgba(52, 221, 221, 1) , 0 0 20px rgba(52, 221, 221, 1) , 0 0 30px rgba(52, 221, 221, 1) , 0 0 40px #34DDDD , 0 0 70px #34DDDD , 0 0 80px #34DDDD , 0 0 100px #34DDDD;*/
+     -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+     -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+     -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+     transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+ }
+
+
+ /*  Remove annoying Bootstrap default focus*/
+ .media-controls .btn:focus, .btn-primary:focus, .ui-slider-handle { outline: none; }
+
+
+
+ /*****************************************/
+ /***          Volume Slider            ***/
+ /*****************************************/
+
+ #sliderContainer{
+     padding: 6px 14px 10px 14px;
+     position: absolute;
+     margin-top: -117px !important;
+     display: none;
+     .opacity-background(0.6);
+ }
+
+
+ #slider{
+     border-width: 1px;
+     border-style: solid;
+     border-color: #333 #333 #777 #333;
+     width: 10px;
+     height: 100px;
+     .inner-shadow(0, 1px, 5px, 0);
+     .border-radius(10px);
+ }
+
+
+ .volume {
+     display: inline-block;
+     width: 25px;
+     height: 25px;
+     /*background: url('../images/volume.png') no-repeat 0 -50px;*/
+     margin-top: -5px;
+ }
+
+
+ .ui-slider-handle {
+     height: 10px !important;
+     cursor: pointer !important;
+     left: -0.35em !important;
+     margin-bottom: -9px !important;
+ }
+
+
+ .ui-slider-range {
+     position: absolute;
+     border: 0;
+     top: 0;
+     height: 100%;
+     /*background: linear-gradient(bottom, #ffffff 0%,#eaeaea 100%);*/
+     .border-radius(25px);
+ }
+
+
+ .ui-slider {
+     margin: 0px !important;
+     float: left;
+ }

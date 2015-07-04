@@ -1,35 +1,42 @@
-<!doctype html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
+<!DOCTYPE html>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+	<!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>auto resize video</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- Latest compiled and minified CSS -->
+    <!-- declare all page rendering and programmatic related tags -->
+    <meta charset="utf-8">
+
+    <!-- Care about IE? -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- title tag is MANDATORY -->
+    <title>auto resize video</title>
+
+    <!-- declare Viewport for Mobile Devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- META DATA (KEYWORD META TAG IS DEPRECIATED)-->
+    <meta name="description" content="">
+    <meta name="author" content="Federico Venturino">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     <!-- jQuery UI stylesheet  -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 
+    <!-- DEVELOPMENT STYLES COMPILED FROM LESS SOURCE FILES USING NODE.JS / OVERRIDES BOOTSTRAP DEFAULTS -->
     <link rel="stylesheet" href="css/custom.css">
-    <!-- endbuild -->
+
 </head>
 <body>
-    <!--[if lt IE 10]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-        your browser</a> to improve your experience.</p>
-    <![endif]-->
-
 
     <div class="main-container">
 
@@ -84,6 +91,7 @@
                     <li>Fully Responsive.</li>
                     <li>Cross-browser compatible.</li>
                     <li>Customizable styles.</li>
+                    <li>Mobile ready.</li>
                     <li>Open source.</li>
                     <li><b>Free.</b></li>
                 </ul>
@@ -93,8 +101,6 @@
             </div>
 
         </section>
-
-
 
         <footer>
             <p>&copy; 2015 - Federico Venturino</p>
@@ -107,6 +113,10 @@
 
     <!-- jQuery UI (for sliders)  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <!-- Other helper JS frameworks -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.4.0/less.min.js"></script>
 
   	<!-- Bootstrap Core JavaScript -->
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
