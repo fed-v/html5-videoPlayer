@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- title tag is MANDATORY -->
-    <title>auto resize video</title>
+    <title>HTML5 Video Player</title>
 
     <!-- declare Viewport for Mobile Devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -32,13 +32,16 @@
     <!-- jQuery UI stylesheet  -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 
+    <!-- WebHostingHub Glyphs -->
+    <link rel="stylesheet" href="css/whhg.css">
+
     <!-- DEVELOPMENT STYLES COMPILED FROM LESS SOURCE FILES USING NODE.JS / OVERRIDES BOOTSTRAP DEFAULTS -->
     <link rel="stylesheet" href="css/custom.css">
 
 </head>
 <body>
 
-    <div class="main-container">
+    <div class="main-container" role="main">
 
         <header>
             <h1>Responsive HTML5 Video</h1>
@@ -74,7 +77,7 @@
                         <!--<span class="tooltip"></span>-->
                         <div id="sliderContainer"><div id="slider"></div></div>
                         <!--<span class="volume"></span>-->
-                        <button id='volumeInc_btn' name='Volume'  class="btn glyphicon glyphicon-volume-up"></button>
+                        <button id='volumeInc_btn' name='Volume' class="btn icon-volume-up"></button>
                         <button id='replay_btn' name='Replay' class="btn glyphicon glyphicon-repeat"></button>
 
                     </div>
@@ -96,7 +99,7 @@
                     <li><b>Free.</b></li>
                 </ul>
 
-                <a href="#"><button class="btn-primary">Get it now!</button></a>
+                <button class="btn-primary">Get it now!</button>
 
             </div>
 
@@ -116,7 +119,6 @@
 
     <!-- Other helper JS frameworks -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.4.0/less.min.js"></script>
 
   	<!-- Bootstrap Core JavaScript -->
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

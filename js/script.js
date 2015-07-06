@@ -213,11 +213,11 @@ jQuery(document).ready(function ($) {
 
                 // CHANGE BUTTON ICON ACCORDING TO VOLUME LEVEL
                 if ((value / 100).toFixed(1) <= 0.0) {
-                    $('#volumeInc_btn').removeClass('glyphicon-volume-up glyphicon-volume-down').addClass('glyphicon-volume-off');
+                    $('#volumeInc_btn').removeClass('icon-volume-up icon-volume-down').addClass('icon-volume-off');
                 } else if ((value / 100).toFixed(1) <= 0.4) {
-                    $('#volumeInc_btn').removeClass('glyphicon-volume-off glyphicon-volume-up').addClass('glyphicon-volume-down');
+                    $('#volumeInc_btn').removeClass('icon-volume-off icon-volume-up').addClass('icon-volume-down');
                 } else if ((value / 100).toFixed(1) <= 0.8) {
-                    $('#volumeInc_btn').removeClass('glyphicon-volume-off glyphicon-volume-down').addClass('glyphicon-volume-up');
+                    $('#volumeInc_btn').removeClass('icon-volume-off icon-volume-down').addClass('icon-volume-up');
                 }
 
             }
