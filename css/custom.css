@@ -442,11 +442,14 @@ th {
  *
  * Author: Federico Venturino
  *
- * Open sourced under MIT license by @mdo.
- * Some variables and mixins for the custom html5 video Player (Apache 2 license).
+ * Open sourced under MIT license.
+ * Some variables and mixins for the custom html5 video Player.
  * https://github.com/fed-v/html5-videoPlayer
  *
  */
+/*****************************************/
+/***             Variables             ***/
+/*****************************************/
 /*****************************************/
 /***          Video Section            ***/
 /*****************************************/
@@ -531,7 +534,7 @@ th {
   background-clip: padding-box;
 }
 #progress-bar {
-  background-color: #34DDDD;
+  background-color: #34dddd;
   height: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -593,10 +596,10 @@ th {
      -webkit-text-fill-color: transparent;
  }*/
 .media-controls .btn:hover {
-  color: #34DDDD;
+  color: #34dddd;
   /*  GLOW EFFECT */
-  text-shadow: 0 0 8px #34DDDD, 0 0 10px #34DDDD;
-  /*text-shadow: 0 0 10px rgba(52, 221, 221, 1) , 0 0 20px rgba(52, 221, 221, 1) , 0 0 30px rgba(52, 221, 221, 1) , 0 0 40px #34DDDD , 0 0 70px #34DDDD , 0 0 80px #34DDDD , 0 0 100px #34DDDD;*/
+  text-shadow: 0 0 8px #34dddd, 0 0 10px #34dddd;
+  /*text-shadow: 0 0 10px rgba(52, 221, 221, 1) , 0 0 20px rgba(52, 221, 221, 1) , 0 0 30px rgba(52, 221, 221, 1) , 0 0 40px @main-color , 0 0 70px @main-color , 0 0 80px @main-color , 0 0 100px @main-color;*/
   -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
   -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
@@ -665,6 +668,9 @@ th {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
+}
+.ui-slider-range-min {
+  background: #34dddd;
 }
 .ui-slider {
   margin: 0px !important;
